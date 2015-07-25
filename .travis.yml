@@ -37,6 +37,7 @@ env:
 branches:
   only:
     - master
+    - hammer
     - develop
     - /^develop-.*$/
 
