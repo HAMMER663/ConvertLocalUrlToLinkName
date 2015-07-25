@@ -1,0 +1,13 @@
+services:
+    hammer663.ConvertLocalUrlToLinkName.listener:
+        class: hammer663\ConvertLocalUrlToLinkName\event\listener
+        arguments:
+            - @auth
+            - @config
+            - @user
+            - @dbal.conn
+            - %core.root_path%
+            - %core.php_ext%
+            - @?phpbbseo.usu.core
+        tags:
+            - { name: event.listener }

@@ -1,0 +1,28 @@
+{
+    "name": "hammer663/ConvertLocalUrlToLinkName",
+    "type": "phpbb-extension",
+    "description": "",
+    "homepage": "http://phpbbguru.net",
+    "version": "0.3.0",
+    "time": "2015-03-20",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "HAMMER663",
+            "homepage": "http://phpbbguru.net",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "require-dev": {
+        "phpbb/epv": "dev-master"
+    },	
+    "extra": {
+        "display-name": "Convert Local Url To Link Name",
+        "soft-require": {
+		    "phpbb/phpbb": "3.1.*@dev"
+        }
+    }
+}
