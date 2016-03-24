@@ -62,6 +62,7 @@ class listener implements EventSubscriberInterface
 	{
 		return array(
 			'core.message_parser_check_message'	=>	'convert_local_url_to_link_name',
+			'core.permissions'					=>	'add_permission',
 		);
 	}
 
@@ -586,6 +587,20 @@ class listener implements EventSubscriberInterface
 			//
 		}
 		$event['message'] = $message;
+	}
+	
+	/**
+	 * Add permissions
+	 *
+	 * @param object $event The event object
+	 * @return null
+	 * @access public
+	 */
+	public function add_permission($event)
+	{
+		$permissions = $event['permissions'];
+		$permissions['a_clutln'] = array('lang' => 'ACL_A_CLUTLN', 'cat' => 'misc');
+		$event['permissions'] = $permissions;
 	}
 //////////////
 }
